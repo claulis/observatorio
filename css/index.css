@@ -1,0 +1,23 @@
+/* Arquivo pode ficar vazio ou com pequenos ajustes */
+@font-face {
+  font-family: 'Rhelax';
+  src: url('/assets/fonts/RHELAXtrial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Aplicação da fonte */
+.font-rhelax {
+  font-family: 'Rhelax', system-ui, sans-serif !important;
+  font-weight: 700;
+}
+/* Exemplo: foco visível para acessibilidade */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Scroll suave nativo com offset via âncora (funciona com padding) */
+section {
+  scroll-margin-top: 160px; /* compensa o cabeçalho fixo */
+}
