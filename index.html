@@ -40,12 +40,12 @@
 <body class="font-rawline text-gray-900 bg-gray-50">
 
   <!-- Banner fixo -->
-  <header class="top-0 left-0 w-full h-50 md:h-50 bg-vermelho-raiz flex items-center justify-center shadow-2xl z-50">
+  <header class="top-30 left-0 w-full h-50 md:h-50 bg-vermelho-raiz flex items-center justify-center shadow-2xl z-50">
     <img src="/assets/img/banner_mulher.png" alt="Presença Africana no DF" class="h-30 md:h-30 max-w-[100%] object-contain">
   </header>
 
   <!-- Menu fixo + Hambúrguer mobile -->
-  <nav class="top-20 md:top-24 left-0 w-full bg-verde-menu shadow-xl z-40">
+  <nav class="fixed top-0 md:top-0 left-0 w-full bg-verde-menu shadow-xl z-40">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <!-- Menu desktop -->
@@ -68,13 +68,18 @@
 
     <!-- Menu mobile dropdown -->
     <div id="mobile-menu" class="hidden md:hidden bg-verde-menu/95">
-      <ul class="font-rhelax font-medium text-lg uppercase tracking-wider py-4">
+      <ul class="font-rhelax font-medium text-3xl uppercase tracking-wider py-6">
         <li><a href="#projeto"     class="block px-8 py-4 text-white hover:bg-white/20">O Projeto</a></li>
         <li><a href="#equipe"      class="block px-8 py-4 text-white hover:bg-white/20">Equipe</a></li>
         <li><a href="#publicacoes" class="block px-8 py-4 text-white hover:bg-white/20">Publicações</a></li>
         <li><a href="#midia"       class="block px-8 py-4 text-white hover:bg-white/20">Mídia</a></li>
         <li><a href="#contato"     class="block px-8 py-4 text-white hover:bg-white/20 border-t border-white/20">Contatos</a></li>
       </ul>
+      <button id="menu-btn" class="md:hidden text-white">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
     </div>
   </nav>
 
@@ -117,7 +122,54 @@
     </section>
 
   </main>
+<!-- ======================== NOVO FOOTER ======================== -->
+  <footer class="bg-verde-menu text-white py-16 mt-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start relative">
 
+        <!-- Coluna esquerda – Redes sociais (centralizado no mobile, alinhado à esquerda no desktop) -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+          <h3 class="font-rhelax text-2xl font-bold mb-8">Siga-nos</h3>
+          <div class="space-y-5 text-lg">
+            <a href="https://instagram.com/seuusuario" target="_blank" class="flex items-center gap-4 hover:text-amarelo-presenca transition">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">...</svg>
+              <span>@presenca.africana.df</span>
+            </a>
+            <a href="https://facebook.com/seuusuario" target="_blank" class="flex items-center gap-4 hover:text-amarelo-presenca transition">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">...</svg>
+              <span>/presencaafricanadf</span>
+            </a>
+            <a href="mailto:contato@presencaafricana.df.gov.br" class="flex items-center gap-4 hover:text-amarelo-presenca transition">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">...</svg>
+              <span>contato@presencaafricana.df.gov.br</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna direita – Mapa -->
+        <div class="flex flex-col items-center md:items-end text-center md:text-right">
+          <h3 class="font-rhelax text-2xl font-bold mb-8">Onde estamos</h3>
+          <div class="w-full max-w-lg h-96 rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.183409855552!2d-47.867629685045!3d-15.760159989075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3c5e8f8b8b8b%3A0x8f8b8f8b8f8b8f8b!2sIFB%20-%20Campus%20Bras%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="mt-6 text-sm opacity-90">
+            IFB – Campus Brasília<br>
+            SGAN 610, Módulos D, E, F e G – Asa Norte, Brasília – DF
+          </p>
+        </div>
+
+        <!-- Linha separadora vertical (aparece só no desktop) -->
+        <div class="hidden md:block absolute inset-y-0 left-1/2 transform -translate-x-1/2 w-px bg-white/30"></div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-sm opacity-80">
+        © 2025 Presença Africana no Distrito Federal – Todos os direitos reservados
+      </div>
+    </div>
+  </footer>
   <!-- Apenas o menu hambúrguer precisa de JS -->
   <script>
     document.getElementById('menu-btn').addEventListener('click', () => {
