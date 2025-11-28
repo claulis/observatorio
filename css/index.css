@@ -1,7 +1,7 @@
 /* Arquivo pode ficar vazio ou com pequenos ajustes */
 @font-face {
   font-family: 'Rhelax';
-  src: url('/../assets/fonts/RHELAXtrial.otf') format('opentype');
+  src: url('~/assets/fonts/RHELAXtrial.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
